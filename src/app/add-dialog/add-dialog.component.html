@@ -1,0 +1,14 @@
+<div fxLayout="column">
+    <mat-form-field class="example-full-width">
+        <mat-label>Label</mat-label>
+        <input matInput [(ngModel)]="itemForm.label">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Quantity</mat-label>
+        <input matInput type="number" [(ngModel)]="itemForm.quantity">
+    </mat-form-field>
+
+    <button mat-button (click)="addItem()" *ngIf="!isUpdate">Add</button>
+    <button mat-button (click)="updateItem()" *ngIf="isUpdate">Update</button>
+</div>
